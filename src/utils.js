@@ -190,6 +190,11 @@ export function scrollIntoView(
   focusedEl: HTMLElement
 ): void {
   const menuRect = menuEl.getBoundingClientRect();
+  if (!focusedEl || !focusedEl.getBoundingClientRect) {
+    console.warn('focusedEl unavailable');
+    return;
+  };
+
   const focusedRect = focusedEl.getBoundingClientRect();
   const overScroll = focusedEl.offsetHeight / 3;
 

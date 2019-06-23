@@ -1,6 +1,8 @@
 # Build
-lib
-dist
+# not publishing on npm
+# change source, build & push :/
+# lib
+# dist
 docs/dist
 .env
 
